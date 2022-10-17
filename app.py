@@ -17,7 +17,7 @@ def index():
 def signin(): 
     account = request.form['account']  
     pwd = request.form["password"]
-    if (account == "test" and pwd == "test") or session['login'] == 'alreadylogin':
+    if (account == "test" and pwd == "test"):
         session['login'] = 'alreadylogin'
         return redirect(url_for("member")) 
     elif account == '' and pwd == '' :
